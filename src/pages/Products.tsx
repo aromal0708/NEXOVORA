@@ -75,9 +75,9 @@ const Products: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen pt-16 bg-primary">
+    <div className="min-h-screen pt-16 bg-neutral-900 text-white">
       {/* Hero Section */}
-      <section className="py-20 bg-primary text-accent">
+      <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -88,7 +88,7 @@ const Products: React.FC = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Our <span className="gradient-text text-glow">Products</span>
             </h1>
-            <p className="text-xl md:text-2xl text-highlight max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Innovative solutions designed to transform industries and improve
               lives. Each product represents our commitment to engineering
               impact.
@@ -98,7 +98,7 @@ const Products: React.FC = () => {
       </section>
 
       {/* Products Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-neutral-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={containerVariants}
@@ -121,43 +121,43 @@ const Products: React.FC = () => {
                     <span
                       className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
                         product.status === "Live"
-                          ? "bg-primary text-accent"
+                          ? "bg-black text-white"
                           : product.status === "Prototype"
-                          ? "bg-tertiary text-primary"
-                          : "bg-secondary text-accent"
+                          ? "bg-gray-700 text-white"
+                          : "bg-gray-800 text-gray-200"
                       }`}
                     >
                       {product.status}
                     </span>
-                    <span className="ml-3 text-sm text-secondary">
+                    <span className="ml-3 text-sm text-gray-400">
                       {product.category}
                     </span>
                   </div>
 
-                  <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                     {product.name}
                   </h2>
 
-                  <p className="text-xl text-primary font-semibold mb-6">
+                  <p className="text-xl text-gray-300 font-semibold mb-6">
                     {product.tagline}
                   </p>
 
-                  <p className="text-lg text-secondary mb-8">
+                  <p className="text-lg text-gray-400 mb-8">
                     {product.description}
                   </p>
 
                   <div className="mb-8">
-                    <h4 className="text-lg font-semibold text-primary mb-4">
+                    <h4 className="text-lg font-semibold text-white mb-4">
                       Key Features:
                     </h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {product.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
-                          className="flex items-center text-secondary"
+                          className="flex items-center text-gray-400"
                         >
                           <svg
-                            className="w-4 h-4 text-primary mr-3 flex-shrink-0"
+                            className="w-4 h-4 text-white mr-3 flex-shrink-0"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -174,10 +174,10 @@ const Products: React.FC = () => {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="btn-premium-dark text-accent px-8 py-3 rounded-lg font-semibold transition-all duration-200">
+                    <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 border-2 border-black hover:bg-gray-800 hover:border-gray-700">
                       Learn More
                     </button>
-                    <button className="border-2 border-primary text-primary hover:glass-black hover:text-accent px-8 py-3 rounded-lg font-semibold transition-all duration-200">
+                    <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold transition-all duration-200 border-2 border-white hover:bg-gray-200 hover:text-black hover:border-gray-400">
                       Request Demo
                     </button>
                   </div>
@@ -190,18 +190,16 @@ const Products: React.FC = () => {
                   }
                 >
                   <motion.div whileHover={{ scale: 1.05 }} className="relative">
-                    <div className="w-full h-80 rounded-2xl bg-primary flex items-center justify-center shadow-white-glow text-accent">
+                    <div className="w-full h-80 rounded-2xl bg-black flex items-center justify-center shadow-lg text-white">
                       <div className="text-8xl opacity-80">{product.icon}</div>
                     </div>
 
                     {/* Floating Elements */}
-                    <div className="absolute -top-4 -right-4 w-20 h-20 glass-white rounded-full flex items-center justify-center shadow-white-glow">
-                      <div className="text-2xl text-primary">
-                        {product.icon}
-                      </div>
+                    <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/10 rounded-full flex items-center justify-center shadow-lg">
+                      <div className="text-2xl text-white">{product.icon}</div>
                     </div>
 
-                    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accent/20 rounded-full animate-pulse"></div>
+                    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/10 rounded-full animate-pulse"></div>
                   </motion.div>
                 </div>
               </motion.div>
@@ -211,7 +209,7 @@ const Products: React.FC = () => {
       </section>
 
       {/* Technology Stack */}
-      <section className="py-20 bg-primary text-accent">
+      <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -226,7 +224,7 @@ const Products: React.FC = () => {
                 Cutting-Edge Technology
               </span>
             </h2>
-            <p className="text-xl text-highlight max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our products leverage the latest technologies to deliver
               exceptional performance, scalability, and user experience.
             </p>
@@ -248,7 +246,7 @@ const Products: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.1 }}
-                className="text-center p-6 bg-white text-primary rounded-lg shadow hover:bg-primary hover:text-accent transition-all duration-200"
+                className="text-center p-6 bg-neutral-800 text-white rounded-lg shadow hover:bg-black hover:text-white transition-all duration-200"
               >
                 <div className="text-4xl mb-3">{tech.icon}</div>
                 <div className="text-sm font-medium">{tech.name}</div>
@@ -259,7 +257,7 @@ const Products: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-accent">
+      <section className="py-20 bg-neutral-900">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -267,18 +265,18 @@ const Products: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Interested in Our Solutions?
             </h2>
-            <p className="text-xl text-secondary mb-8">
+            <p className="text-xl text-gray-400 mb-8">
               Get in touch to learn more about how our products can benefit your
               organization or to discuss potential collaborations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-premium-dark text-accent px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
+              <button className="bg-black text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 border-2 border-black hover:bg-gray-800 hover:border-gray-700">
                 Schedule a Demo
               </button>
-              <button className="border-2 border-primary text-primary hover:glass-black hover:text-accent px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
+              <button className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 border-2 border-white hover:bg-gray-200 hover:text-black hover:border-gray-400">
                 Contact Sales
               </button>
             </div>

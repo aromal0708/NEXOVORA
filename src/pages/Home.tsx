@@ -26,27 +26,18 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-neutral-900">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-primary overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center bg-black overflow-hidden">
         {/* Background Animation Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl float-animation"></div>
-          <div
-            className="absolute bottom-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl float-animation"
-            style={{ animationDelay: "2s" }}
-          ></div>
-          <div
-            className="absolute top-1/2 left-1/3 w-64 h-64 bg-accent/5 rounded-full blur-2xl float-animation"
-            style={{ animationDelay: "4s" }}
-          ></div>
+          {/* Remove colored background animations for grayscale look */}
         </div>
 
         {/* Blurred blue gradients on sides */}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-56 h-56 bg-gradient-to-br from-blue-400 to-blue-700 opacity-40 blur-3xl rounded-full -z-10" />
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-56 h-56 bg-gradient-to-bl from-blue-400 to-blue-700 opacity-40 blur-3xl rounded-full -z-10" />
+        {/* Remove colored gradients for grayscale look */}
         {/* Main Title */}
-        <div className="relative z-10 text-center text-primary px-4 max-w-5xl mx-auto">
+        <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.5, rotateY: 180 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
@@ -64,16 +55,16 @@ const Home: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-6xl font-bold mb-6"
           >
-            <span className="gradient-text ">Engineering Impact.</span>
+            <span className="text-white">Engineering Impact.</span>
             <br />
-            <span className="text-accent">Building the Future.</span>
+            <span className="text-gray-400">Building the Future.</span>
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl mb-8 text-highlight max-w-3xl mx-auto"
+            className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto"
           ></motion.p>
 
           <motion.div
@@ -84,13 +75,13 @@ const Home: React.FC = () => {
           >
             <Link
               to="/products"
-              className="btn-premium text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:bg-gray-200"
             >
               Explore Our Products
             </Link>
             <Link
               to="/about"
-              className="btn-premium-dark text-accent hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-gray-800 text-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:bg-gray-200"
             >
               Our Story
             </Link>
@@ -115,7 +106,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* About Preview Section */}
-      <section className="py-20 bg-white text-primary">
+      <section className="py-20 bg-neutral-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -124,10 +115,10 @@ const Home: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Who We Are
             </h2>
-            <p className="text-xl text-secondary max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Born from innovation and nurtured in academia, Nexovora represents
               the next generation of technology companies. We're not just
               building products—we're crafting solutions that matter.
@@ -161,13 +152,13 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-primary/90 rounded-xl hover:shadow-white-glow transition-all duration-300"
+                className="text-center p-6 bg-neutral-800 rounded-xl hover:shadow-lg transition-all duration-300"
               >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold text-accent mb-2">
+                <div className="text-4xl mb-4 text-gray-400">{item.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-highlight">{item.description}</p>
+                <p className="text-gray-300">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -175,7 +166,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Products Preview Section */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -187,7 +178,7 @@ const Home: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Innovation Portfolio
             </h2>
-            <p className="text-xl text-highlight max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Discover our cutting-edge products that are transforming
               industries and improving lives across education, mobility, and
               infrastructure.
@@ -203,18 +194,18 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white rounded-xl p-8 shadow-premium hover:shadow-white-glow transition-all duration-300"
+                className="bg-neutral-800 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300"
               >
-                <div className="w-16 h-16 rounded-lg bg-primary flex items-center justify-center text-2xl mb-6 text-accent shimmer">
+                <div className="w-16 h-16 rounded-lg bg-neutral-900 flex items-center justify-center text-2xl mb-6 text-gray-400">
                   {product.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   {product.name}
                 </h3>
-                <p className="text-secondary mb-6">{product.description}</p>
+                <p className="text-gray-300 mb-6">{product.description}</p>
                 <Link
                   to="/products"
-                  className="inline-flex items-center text-primary hover:text-tertiary font-semibold transition-colors duration-200"
+                  className="inline-flex items-center text-white hover:text-gray-400 font-semibold transition-colors duration-200"
                 >
                   Learn More
                   <svg
@@ -238,7 +229,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-neutral-900">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -246,23 +237,23 @@ const Home: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Build the Future?
             </h2>
-            <p className="text-xl text-secondary mb-8">
+            <p className="text-xl text-gray-400 mb-8">
               Join us in our mission to create impactful digital solutions that
               matter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/careers"
-                className="btn-premium text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:bg-gray-200"
               >
                 Join Our Team
               </Link>
               <Link
                 to="/contact"
-                className="glass-white border-2 border-white/30 text-primary hover:glass-black hover:text-accent px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-gray-800 text-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:bg-gray-200"
               >
                 Get In Touch
               </Link>

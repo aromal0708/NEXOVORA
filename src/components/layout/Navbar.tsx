@@ -30,29 +30,16 @@ const Navbar: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full z-50 transition-all duration-300 bg-primary/95 backdrop-blur-md shadow-lg`}
+      className={`fixed w-full z-50 transition-all duration-300 bg-black backdrop-blur-md shadow-lg`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo on the left */}
           <Link to="/" className="flex items-center">
             <motion.img
-              src="/nexovora-logo.jpg"
+              src="NEXOVORAwhitelogo.png"
               alt="Nexovora Logo"
-              className="h-10 w-auto rounded-lg shadow-white-glow cursor-pointer"
-              whileHover={{ scale: 1.2, rotateY: 20, rotateX: 10, z: 50 }}
-              whileTap={{ scale: 0.9 }}
-              animate={{
-                rotateY: [0, 8, 0, -8, 0],
-                rotateX: [0, 3, 0, -3, 0],
-                scale: [1, 1.05, 1],
-              }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              style={{
-                transformStyle: "preserve-3d",
-                filter:
-                  "drop-shadow(0 15px 25px rgba(255, 255, 255, 0.15)) drop-shadow(0 5px 10px rgba(255, 255, 255, 0.1))",
-              }}
+              className="h-20 w-auto"
             />
           </Link>
 
@@ -64,8 +51,8 @@ const Navbar: React.FC = () => {
                 to={item.path}
                 className={`font-semibold text-lg transition-colors duration-200 cursor-pointer px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 focus:ring-offset-primary/80 ${
                   location.pathname === item.path
-                    ? "text-primary bg-white shadow-white-glow"
-                    : "text-white hover:text-primary hover:bg-white/80 hover:shadow-lg"
+                    ? "text-white bg-black shadow-white-glow"
+                    : "text-white hover:text-gray-400 hover:bg-gray-200 hover:shadow-lg"
                 }`}
                 aria-current={
                   location.pathname === item.path ? "page" : undefined

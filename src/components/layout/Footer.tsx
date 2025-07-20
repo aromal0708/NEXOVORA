@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-primary text-white border-t border-white/10">
+    <footer className="bg-black text-white border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -42,9 +42,9 @@ const Footer: React.FC = () => {
           >
             <div className="flex items-center mb-4">
               <motion.img
-                src="/nexovora-logo.jpg"
+                src="NEXOVORAwhitelogo.png"
                 alt="Nexovora Logo"
-                className="h-10 w-auto rounded mr-4 cursor-pointer"
+                className="h-11 w-auto rounded mr-4 cursor-pointer"
                 whileHover={{
                   scale: 1.12,
                   rotateY: 18,
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
               />
               <h3 className="text-2xl font-extrabold text-white">Nexovora</h3>
             </div>
-            <p className="text-highlight mb-6 max-w-xl text-base">
+            <p className="text-gray-400 mb-6 max-w-xl text-base">
               A next-gen tech company incubated in college, building impactful
               digital solutions in education, mobility, and infrastructure.
               Engineering Impact. Building the Future.
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.13 }}
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-white text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
               >
                 <span className="sr-only">LinkedIn</span>
                 <svg
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.13 }}
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-white text-[#EA4335] hover:bg-[#EA4335] hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
               >
                 <span className="sr-only">Email</span>
                 <svg
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.13 }}
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-white text-[#1877F3] hover:bg-[#1877F3] hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
               >
                 <span className="sr-only">Facebook</span>
                 <svg
@@ -132,7 +132,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.13 }}
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-white text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
               >
                 <span className="sr-only">Instagram</span>
                 <svg
@@ -150,7 +150,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.13 }}
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-white text-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
               >
                 <span className="sr-only">Twitter</span>
                 <svg
@@ -168,7 +168,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.13 }}
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-white text-black hover:bg-black hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
               >
                 <span className="sr-only">GitHub</span>
                 <svg
@@ -190,13 +190,15 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold mb-4 text-accent">Company</h4>
+            <h4 className="text-lg font-semibold mb-4 text-gray-200">
+              Company
+            </h4>
             <ul className="space-y-2">
               {footerLinks.company.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.path}
-                    className="text-highlight hover:text-accent transition-colors duration-200"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -212,13 +214,13 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold mb-4 text-accent">Legal</h4>
+            <h4 className="text-lg font-semibold mb-4 text-gray-200">Legal</h4>
             <ul className="space-y-2">
               {footerLinks.legal.map((item) => (
                 <li key={item.name}>
                   <a
                     href={item.path}
-                    className="text-highlight hover:text-accent transition-colors duration-200"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     {item.name}
                   </a>
@@ -229,7 +231,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-white/10 my-6"></div>
+        <div className="border-t border-gray-800 my-6"></div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -237,7 +239,7 @@ const Footer: React.FC = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-highlight text-sm">
+          <p className="text-gray-500 text-sm">
             © {currentYear} Nexovora. All rights reserved. Incubated with
             passion, built with purpose.
           </p>

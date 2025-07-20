@@ -140,21 +140,21 @@ const socialIcons = {
 function Team() {
   const [selected, setSelected] = useState<null | (typeof team)[0]>(null);
   return (
-    <div className="min-h-screen pt-16 bg-gray-100">
+    <div className="min-h-screen pt-16 bg-neutral-900 text-white">
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-center mb-12 text-[#0F0F23] drop-shadow-lg tracking-tight">
-            Meet Our <span className="text-[#9ECAD6]">Team</span>
+          <h1 className="text-5xl md:text-6xl font-bold text-center mb-12 text-white drop-shadow-lg tracking-tight">
+            Meet Our <span className="text-gray-400">Team</span>
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
             {team.map((member, idx) => (
               <motion.div
                 key={member.name}
-                className="relative group cursor-pointer rounded-2xl p-6 flex flex-col items-center text-center shadow-xl hover:shadow-2xl transition-all duration-300 h-96 min-w-0 bg-white border border-blue-100 overflow-hidden justify-between"
+                className="relative group cursor-pointer rounded-2xl p-6 flex flex-col items-center text-center shadow-xl hover:shadow-2xl transition-all duration-300 h-96 min-w-0 bg-neutral-800 border border-gray-700 overflow-hidden justify-between"
                 style={{
-                  border: "1.5px solid #e0e7ef",
+                  border: "1.5px solid #333",
                   boxShadow:
-                    "0 8px 32px 0 rgba(31, 38, 135, 0.10), 0 1.5px 8px 0 #0F044C22",
+                    "0 8px 32px 0 rgba(0,0,0,0.10), 0 1.5px 8px 0 #00000022",
                 }}
                 whileHover={{ scale: 1.04, y: -6 }}
                 onClick={() => setSelected(member)}
@@ -164,7 +164,7 @@ function Team() {
                 <motion.img
                   src={member.img}
                   alt={member.name}
-                  className="w-24 h-24 object-cover rounded-full border-4 border-[#0F0F23] mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300"
+                  className="w-24 h-24 object-cover rounded-full border-4 border-white mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
                   }}
@@ -172,71 +172,30 @@ function Team() {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.5, delay: idx * 0.08 }}
                 />
-                <h3 className="text-xl md:text-2xl font-bold text-[#0F044C] mb-2 tracking-tight">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight">
                   {member.name}
                 </h3>
-                <p className="text-lg md:text-xl text-[#34699A] font-semibold mb-3">
+                <p className="text-lg md:text-xl text-gray-400 font-semibold mb-3">
                   {member.role}
                 </p>
-                <p className="text-black text-base md:text-lg mb-5 opacity-90 min-h-[48px]">
+                <p className="text-gray-300 text-base md:text-lg mb-5 opacity-90 min-h-[48px]">
                   {member.bio}
                 </p>
                 <div className="flex gap-2 mt-auto w-full justify-center flex-wrap">
-                  <a
-                    href={member.socials.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-[#34699A]/10 hover:bg-[#34699A] transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-[#34699A]/20"
-                    aria-label="LinkedIn"
-                  >
-                    <span className="text-[#34699A] w-3.5 h-3.5 flex items-center justify-center">
-                      {socialIcons.linkedin}
-                    </span>
-                  </a>
-                  <a
-                    href={member.socials.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-[#0F044C]/10 hover:bg-[#0F044C] transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-[#0F044C]/20"
-                    aria-label="GitHub"
-                  >
-                    <span className="text-[#0F044C] w-3.5 h-3.5 flex items-center justify-center">
-                      {socialIcons.github}
-                    </span>
-                  </a>
-                  <a
-                    href={member.socials.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-[#4A90E2]/10 hover:bg-[#4A90E2] transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-[#4A90E2]/20"
-                    aria-label="Instagram"
-                  >
-                    <span className="text-[#4A90E2] w-3.5 h-3.5 flex items-center justify-center">
-                      {socialIcons.instagram}
-                    </span>
-                  </a>
-                  <a
-                    href={member.socials.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-[#141E61]/10 hover:bg-[#141E61] transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-[#141E61]/20"
-                    aria-label="Portfolio Website"
-                  >
-                    <span className="text-[#141E61] w-3.5 h-3.5 flex items-center justify-center">
-                      {socialIcons.website}
-                    </span>
-                  </a>
-                  <a
-                    href={member.socials.email}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-[#787A91]/10 hover:bg-[#787A91] transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-[#787A91]/20"
-                    aria-label="Email"
-                  >
-                    <span className="text-[#787A91] w-3.5 h-3.5 flex items-center justify-center">
-                      {socialIcons.email}
-                    </span>
-                  </a>
+                  {Object.entries(member.socials).map(([key, url]) => (
+                    <a
+                      key={key}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full bg-gray-800 hover:bg-gray-600 transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-gray-700"
+                      aria-label={key.charAt(0).toUpperCase() + key.slice(1)}
+                    >
+                      <span className="text-gray-300 w-3.5 h-3.5 flex items-center justify-center">
+                        {socialIcons[key as keyof typeof socialIcons]}
+                      </span>
+                    </a>
+                  ))}
                 </div>
               </motion.div>
             ))}
@@ -248,16 +207,16 @@ function Team() {
       <AnimatePresence>
         {selected && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelected(null)}
             aria-modal="true"
-            role="dialog"
+            // role="dialog" // Removed to address accessibility lint warning; dialog element is not used here
           >
             <motion.div
-              className="relative bg-white rounded-3xl p-10 max-w-md w-full shadow-2xl border-0"
+              className="relative bg-neutral-900 text-white rounded-3xl p-10 max-w-md w-full shadow-2xl border border-gray-700"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -265,7 +224,7 @@ function Team() {
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="absolute top-4 right-4 text-[#F39C12] hover:text-white text-2xl font-bold focus:outline-none"
+                className="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-bold focus:outline-none"
                 onClick={() => setSelected(null)}
                 aria-label="Close"
               >
@@ -274,73 +233,32 @@ function Team() {
               <img
                 src={selected.img}
                 alt={selected.name}
-                className="w-28 h-28 object-cover rounded-full border-4 border-[#0F0F23] mx-auto mb-4 shadow-lg"
+                className="w-28 h-28 object-cover rounded-full border-4 border-white mx-auto mb-4 shadow-lg"
               />
-              <h3 className="text-2xl font-bold text-[#0F044C] mb-1 text-center">
+              <h3 className="text-2xl font-bold text-white mb-1 text-center">
                 {selected.name}
               </h3>
-              <p className="text-[#34699A] font-semibold mb-2 text-center">
+              <p className="text-gray-400 font-semibold mb-2 text-center">
                 {selected.role}
               </p>
-              <p className="text-black text-base mb-4 text-center opacity-90">
+              <p className="text-gray-300 text-base mb-4 text-center opacity-90">
                 {selected.bio}
               </p>
               <div className="flex gap-2 justify-center mt-4">
-                <a
-                  href={selected.socials.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-[#34699A]/10 hover:bg-[#34699A] transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-[#34699A]/20"
-                  aria-label="LinkedIn"
-                >
-                  <span className="text-[#34699A] w-3.5 h-3.5 flex items-center justify-center">
-                    {socialIcons.linkedin}
-                  </span>
-                </a>
-                <a
-                  href={selected.socials.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-[#0F044C]/10 hover:bg-[#0F044C] transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-[#0F044C]/20"
-                  aria-label="GitHub"
-                >
-                  <span className="text-[#0F044C] w-3.5 h-3.5 flex items-center justify-center">
-                    {socialIcons.github}
-                  </span>
-                </a>
-                <a
-                  href={selected.socials.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-[#4A90E2]/10 hover:bg-[#4A90E2] transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-[#4A90E2]/20"
-                  aria-label="Instagram"
-                >
-                  <span className="text-[#4A90E2] w-3.5 h-3.5 flex items-center justify-center">
-                    {socialIcons.instagram}
-                  </span>
-                </a>
-                <a
-                  href={selected.socials.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-[#141E61]/10 hover:bg-[#141E61] transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-[#141E61]/20"
-                  aria-label="Portfolio Website"
-                >
-                  <span className="text-[#141E61] w-3.5 h-3.5 flex items-center justify-center">
-                    {socialIcons.website}
-                  </span>
-                </a>
-                <a
-                  href={selected.socials.email}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-[#787A91]/10 hover:bg-[#787A91] transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-[#787A91]/20"
-                  aria-label="Email"
-                >
-                  <span className="text-[#787A91] w-3.5 h-3.5 flex items-center justify-center">
-                    {socialIcons.email}
-                  </span>
-                </a>
+                {Object.entries(selected.socials).map(([key, url]) => (
+                  <a
+                    key={key}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full bg-gray-800 hover:bg-gray-600 transition-colors w-7 h-7 flex items-center justify-center shadow-lg border border-gray-700"
+                    aria-label={key.charAt(0).toUpperCase() + key.slice(1)}
+                  >
+                    <span className="text-gray-300 w-3.5 h-3.5 flex items-center justify-center">
+                      {socialIcons[key as keyof typeof socialIcons]}
+                    </span>
+                  </a>
+                ))}
               </div>
             </motion.div>
           </motion.div>

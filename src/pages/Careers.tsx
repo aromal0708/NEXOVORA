@@ -179,9 +179,9 @@ const Careers: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen pt-16 bg-white">
-      {/* Hero Section - White background, dark text */}
-      <section className="py-20 bg-white text-[#0F0F23]">
+    <div className="min-h-screen pt-16 bg-neutral-900 text-white">
+      {/* Hero Section - Black background, white text */}
+      <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -190,9 +190,9 @@ const Careers: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Join Our <span className="gradient-text text-glow">Journey</span>
+              Join Our <span className="text-white">Journey</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#0F0F23] max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Be part of a team that's engineering impact and building the
               future. Discover opportunities to grow, innovate, and make a
               difference.
@@ -201,8 +201,8 @@ const Careers: React.FC = () => {
         </div>
       </section>
 
-      {/* Why Join Us Section - Primary color background, accent text */}
-      <section className="py-20 bg-primary text-accent">
+      {/* Why Join Us Section - Black background, white text */}
+      <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -211,10 +211,10 @@ const Careers: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-accent mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Nexovora?
             </h2>
-            <p className="text-xl text-accent max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               We're more than just a company—we're a community of innovators,
               dreamers, and problem-solvers united by a common purpose.
             </p>
@@ -265,21 +265,21 @@ const Careers: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 glass-white rounded-lg hover:shadow-white-glow transition-all duration-300"
+                className="text-center p-6 bg-neutral-800 rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold text-accent mb-3">
+                <h3 className="text-xl font-semibold text-white mb-3">
                   {item.title}
                 </h3>
-                <p className="text-accent/90">{item.description}</p>
+                <p className="text-gray-300">{item.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Open Positions */}
-      <section className="py-20 bg-white text-[#0F0F23]">
+      {/* Open Positions - White background, black text */}
+      <section className="py-20 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -288,10 +288,10 @@ const Careers: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#0F0F23]">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">
               Open Positions
             </h2>
-            <p className="text-xl text-[#0F0F23] max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Find your perfect role and join us in building the future of
               technology.
             </p>
@@ -309,26 +309,26 @@ const Careers: React.FC = () => {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ scale: 1.02 }}
-                className="glass-white text-[#0F0F23] rounded-xl p-8 shadow-2xl hover:shadow-premium border-2 border-accent/40 transition-all duration-300"
+                className="bg-white text-black rounded-xl p-8 shadow-2xl hover:shadow-lg border-2 border-gray-200 transition-all duration-300"
               >
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">{role.title}</h3>
                     <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="bg-primary text-accent px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-medium">
                         {role.department}
                       </span>
-                      <span className="bg-tertiary text-primary px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-medium">
                         {role.type}
                       </span>
-                      <span className="bg-secondary text-accent px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-gray-400 text-black px-3 py-1 rounded-full text-sm font-medium">
                         {role.location}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-[#0F0F23] mb-6">{role.description}</p>
+                <p className="text-gray-700 mb-6">{role.description}</p>
 
                 <div className="mb-6">
                   <h4 className="font-semibold mb-3">Requirements:</h4>
@@ -336,10 +336,10 @@ const Careers: React.FC = () => {
                     {role.requirements.map((req, reqIndex) => (
                       <li
                         key={reqIndex}
-                        className="flex items-start text-sm text-[#0F0F23]"
+                        className="flex items-start text-sm text-gray-700"
                       >
                         <svg
-                          className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0"
+                          className="w-4 h-4 text-gray-900 mr-2 mt-0.5 flex-shrink-0"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -356,14 +356,14 @@ const Careers: React.FC = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-3 text-accent">
+                  <h4 className="font-semibold mb-3 text-gray-900">
                     Key Skills:
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {role.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="bg-accent/10 text-accent px-3 py-1 rounded font-semibold text-sm border-2 border-accent shadow-accent/20"
+                        className="bg-gray-200 text-gray-900 px-3 py-1 rounded font-semibold text-sm border-2 border-gray-300 shadow-md"
                       >
                         {skill}
                       </span>
@@ -371,7 +371,7 @@ const Careers: React.FC = () => {
                   </div>
                 </div>
 
-                <button className="w-full btn-premium-dark text-accent py-3 rounded-lg font-semibold transition-all duration-200">
+                <button className="w-full bg-black text-white py-3 rounded-lg font-semibold transition-all duration-200 border border-gray-900 hover:bg-gray-800">
                   Apply Now
                 </button>
               </motion.div>
@@ -380,8 +380,8 @@ const Careers: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section - Primary color background, accent text */}
-      <section className="py-20 bg-primary text-accent">
+      {/* Benefits Section - Black background, white text */}
+      <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -390,10 +390,10 @@ const Careers: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-accent mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Benefits & Perks
             </h2>
-            <p className="text-xl text-accent max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               We believe in taking care of our team members with comprehensive
               benefits and a supportive work environment.
             </p>
@@ -407,21 +407,21 @@ const Careers: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 border border-tertiary glass-white rounded-lg hover:shadow-white-glow transition-all duration-300"
+                className="text-center p-6 border border-gray-700 bg-neutral-800 rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-accent mb-3">
+                <h3 className="text-xl font-semibold text-white mb-3">
                   {benefit.title}
                 </h3>
-                <p className="text-accent/90">{benefit.description}</p>
+                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section - White background, dark text */}
-      <section className="py-20 bg-white text-[#0F0F23]">
+      {/* CTA Section - White background, black text */}
+      <section className="py-20 bg-white text-black">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -429,23 +429,23 @@ const Careers: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#0F0F23]">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">
               Ready to Make an Impact?
             </h2>
-            <p className="text-xl text-[#0F0F23] mb-8">
+            <p className="text-xl text-gray-700 mb-8">
               Don't see a role that fits? We're always looking for talented
               individuals who are passionate about innovation and making a
               difference.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                className="btn-premium text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
+                className="bg-black text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 border border-gray-900 hover:bg-gray-800"
                 onClick={() => setShowResumeModal(true)}
               >
                 Send Your Resume
               </button>
               <button
-                className="border-2 border-accent text-accent hover:glass-white hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
+                className="bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 border border-gray-900 hover:bg-black"
                 onClick={() => navigate("/about")}
               >
                 Learn More About Us

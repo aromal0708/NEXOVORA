@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    name: string;
+    email: string;
+    company: string;
+    subject: string;
+    message: string;
+  }>({
     name: "",
     email: "",
     company: "",
@@ -82,9 +88,9 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16 bg-black">
+    <div className="min-h-screen pt-16 bg-neutral-900 text-white">
       {/* Hero Section */}
-      <section className="py-20 bg-white text-[#0F0F23]">
+      <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -92,10 +98,10 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Get In <span className="gradient-text text-glow">Touch</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#0F0F23] max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Have questions about our products? Want to explore partnership
               opportunities? We'd love to hear from you.
             </p>
@@ -104,7 +110,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-20 bg-primary text-accent">
+      <section className="py-20 bg-neutral-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -113,9 +119,9 @@ const Contact: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl p-10"
+              className="bg-white rounded-2xl shadow-xl p-10 text-neutral-900"
             >
-              <h2 className="text-3xl font-bold text-accent mb-6">
+              <h2 className="text-3xl font-bold text-neutral-900 mb-6">
                 Send us a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -247,7 +253,7 @@ const Contact: React.FC = () => {
                 <h2 className="text-3xl font-bold text-accent mb-6">
                   Contact Information
                 </h2>
-                <p className="text-accent/80 mb-8">
+                <p className="text-gray-700 mb-8">
                   We're here to help and answer any questions you might have.
                   Reach out through any of the following channels.
                 </p>
@@ -260,22 +266,22 @@ const Contact: React.FC = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="flex items-center p-4 glass-white rounded-lg hover:shadow-white-glow transition-all duration-200"
+                      className="flex items-center p-4 bg-neutral-100 rounded-lg hover:shadow-lg transition-all duration-200"
                     >
                       <div className="text-2xl mr-4">{info.icon}</div>
                       <div>
-                        <h3 className="font-semibold text-accent">
+                        <h3 className="font-semibold text-neutral-900">
                           {info.title}
                         </h3>
                         {info.link !== "#" ? (
                           <a
                             href={info.link}
-                            className="text-accent/90 hover:text-accent font-medium transition-colors duration-200"
+                            className="text-gray-700 hover:text-black font-medium transition-colors duration-200"
                           >
                             {info.value}
                           </a>
                         ) : (
-                          <p className="text-accent/90 font-medium">
+                          <p className="text-gray-700 font-medium">
                             {info.value}
                           </p>
                         )}
@@ -287,7 +293,7 @@ const Contact: React.FC = () => {
 
               {/* Social Links */}
               <div>
-                <h3 className="text-xl font-bold text-accent mb-4">
+                <h3 className="text-xl font-bold text-neutral-900 mb-4">
                   Follow Us
                 </h3>
                 <div className="flex space-x-4">
@@ -298,7 +304,7 @@ const Contact: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
-                      className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-xl text-primary hover:bg-white hover:text-accent border-2 border-accent transition-all duration-200"
+                      className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-xl text-neutral-900 hover:bg-gray-300 hover:text-black border-2 border-gray-300 transition-all duration-200"
                     >
                       {social.icon}
                     </motion.a>
@@ -307,9 +313,9 @@ const Contact: React.FC = () => {
               </div>
 
               {/* Office Hours */}
-              <div className="glass-white p-6 rounded-lg text-accent">
+              <div className="bg-neutral-100 p-6 rounded-lg text-neutral-900">
                 <h3 className="text-xl font-bold mb-3">Office Hours</h3>
-                <div className="space-y-2 text-primary">
+                <div className="space-y-2 text-gray-700">
                   <p>
                     <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM
                   </p>
@@ -327,7 +333,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Location/Map Section */}
-      <section className="py-20 bg-white text-[#0F0F23]">
+      <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -340,7 +346,7 @@ const Contact: React.FC = () => {
               Visit Our{" "}
               <span className="gradient-text text-glow">Incubator</span>
             </h2>
-            <p className="text-xl text-[#0F0F23] max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Located in the heart of innovation at our university's tech
               incubator, where ideas come to life and the future is built.
             </p>
@@ -353,12 +359,12 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold mb-6 text-[#0F0F23]">
+              <h3 className="text-2xl font-bold mb-6 text-white">
                 Our Location
               </h3>
-              <div className="space-y-4 text-[#0F0F23]">
+              <div className="space-y-4 text-gray-300">
                 <p>
-                  <strong className="text-primary">Address:</strong>
+                  <strong className="text-white">Address:</strong>
                   <br />
                   Tech Innovation Center
                   <br />
@@ -368,7 +374,7 @@ const Contact: React.FC = () => {
                   Tech City, TC 12345
                 </p>
                 <p>
-                  <strong className="text-primary">Getting Here:</strong>
+                  <strong className="text-white">Getting Here:</strong>
                   <br />
                   • Public transportation: Metro Line 2, Tech Station
                   <br />
@@ -378,7 +384,7 @@ const Contact: React.FC = () => {
                   at building entrance
                 </p>
                 <p>
-                  <strong className="text-primary">Accessibility:</strong>
+                  <strong className="text-white">Accessibility:</strong>
                   <br />
                   Our facility is fully accessible with elevator access to all
                   floors, accessible parking, and barrier-free entrances.
@@ -397,8 +403,8 @@ const Contact: React.FC = () => {
               <div className="aspect-video glass-black rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🗺️</div>
-                  <p className="text-lg text-primary">Interactive Map</p>
-                  <p className="text-sm text-[#0F0F23] mt-2">
+                  <p className="text-lg text-gray-300">Interactive Map</p>
+                  <p className="text-sm text-gray-500 mt-2">
                     Click to view on Google Maps
                   </p>
                 </div>
@@ -409,7 +415,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-primary text-accent">
+      <section className="py-20 bg-neutral-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -421,7 +427,7 @@ const Contact: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-accent/90">
+            <p className="text-xl text-gray-300">
               Quick answers to common questions about Nexovora and our services.
             </p>
           </motion.div>
@@ -455,12 +461,12 @@ const Contact: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="glass-white rounded-lg p-6"
+                className="bg-neutral-800 rounded-lg p-6"
               >
                 <h3 className="text-lg font-semibold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-accent/90 font-medium">{faq.answer}</p>
+                <p className="text-gray-300 font-medium">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
