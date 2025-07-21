@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Instagram,
-  Facebook,
-  Twitter,
-  Github,
-  Linkedin,
-  Mail,
-} from "lucide-react";
+  IoLogoFacebook,
+  IoLogoGithub,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+  IoLogoTwitter,
+} from "react-icons/io";
+import { MdOutlineEmail } from "react-icons/md";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-6 h-6" />
+                <IoLogoLinkedin className="w-6 h-6" />
               </motion.a>
               {/* Email */}
               <motion.a
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
                 aria-label="Email"
               >
-                <Mail className="w-6 h-6" />
+                <MdOutlineEmail className="w-6 h-6" />
               </motion.a>
               {/* Facebook */}
               <motion.a
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
                 aria-label="Facebook"
               >
-                <Facebook className="w-6 h-6" />
+                <IoLogoFacebook className="w-6 h-6" />
               </motion.a>
               {/* Instagram */}
               <motion.a
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
                 aria-label="Instagram"
               >
-                <Instagram className="w-6 h-6" />
+                <IoLogoInstagram className="w-6 h-6" />
               </motion.a>
               {/* Twitter */}
               <motion.a
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
                 aria-label="Twitter"
               >
-                <Twitter className="w-6 h-6" />
+                <IoLogoTwitter className="w-6 h-6" />
               </motion.a>
               {/* GitHub */}
               <motion.a
@@ -136,7 +136,7 @@ const Footer: React.FC = () => {
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300"
                 aria-label="GitHub"
               >
-                <Github className="w-6 h-6" />
+                <IoLogoGithub className="w-6 h-6" />
               </motion.a>
             </div>
           </motion.div>

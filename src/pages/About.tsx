@@ -35,7 +35,7 @@ const About: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="gradient-text text-glow">Story</span>
+              Our <span className="text-white">Story</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               From college dormitories to cutting-edge solutions, discover the
@@ -175,7 +175,7 @@ const About: React.FC = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
               Incubated with{" "}
-              <span className="gradient-text text-glow">Purpose</span>
+              <span className="text-white">Purpose</span>
             </h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-xl text-gray-300 mb-6">

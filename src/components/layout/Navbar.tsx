@@ -11,6 +11,7 @@ const Navbar: React.FC = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
+    console.log(scrolled)
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
