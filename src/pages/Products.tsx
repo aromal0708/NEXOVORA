@@ -86,7 +86,7 @@ const Products: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="gradient-text text-glow">Products</span>
+              Our <span className="text-white">Products</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Innovative solutions designed to transform industries and improve
@@ -220,7 +220,7 @@ const Products: React.FC = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Built with{" "}
-              <span className="gradient-text text-glow">
+              <span className="text-white">
                 Cutting-Edge Technology
               </span>
             </h2>

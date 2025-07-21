@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    console.log(scrolled)
+    console.log(scrolled);
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -22,7 +22,6 @@ const Navbar: React.FC = () => {
     { name: "About", path: "/about" },
     { name: "Team", path: "/team" },
     { name: "Products", path: "/products" },
-    { name: "Careers", path: "/careers" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -45,15 +44,15 @@ const Navbar: React.FC = () => {
           </Link>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex flex-1 justify-end items-center space-x-6">
+          <div className="hidden md:flex flex-1 justify-end items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`font-semibold text-lg transition-colors duration-200 cursor-pointer px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 focus:ring-offset-primary/80 ${
+                className={`nav-link font-semibold text-lg transition-colors duration-300 cursor-pointer px-3 py-2 focus:outline-none ${
                   location.pathname === item.path
-                    ? "text-white bg-black shadow-white-glow"
-                    : "text-white hover:text-gray-400 hover:bg-gray-200 hover:shadow-lg"
+                    ? "text-white active"
+                    : "text-white hover:text-gray-300"
                 }`}
                 aria-current={
                   location.pathname === item.path ? "page" : undefined
@@ -67,7 +66,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-accent hover:text-highlight focus:outline-none focus:text-highlight transition-colors duration-200"
+              className="text-white hover:text-gray-300 focus:outline-none transition-colors duration-300"
             >
               <svg
                 className="h-6 w-6"
@@ -109,10 +108,10 @@ const Navbar: React.FC = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 focus:ring-offset-primary/80 ${
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 cursor-pointer focus:outline-none ${
                     location.pathname === item.path
-                      ? "text-primary bg-white shadow-white-glow"
-                      : "text-white hover:text-primary hover:bg-white/80 hover:shadow-lg"
+                      ? "text-white bg-white/10 border-l-2 border-white"
+                      : "text-white hover:text-gray-300 hover:bg-white/5"
                   }`}
                   aria-current={
                     location.pathname === item.path ? "page" : undefined

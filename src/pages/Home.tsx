@@ -246,16 +246,16 @@ const Home: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/careers"
+                to="/contact"
                 className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:bg-gray-200"
               >
                 Join Our Team
               </Link>
               <Link
-                to="/contact"
+                to="/products"
                 className="bg-gray-800 text-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:bg-gray-200"
               >
-                Get In Touch
+                View Products
               </Link>
             </div>
           </motion.div>

@@ -1,5 +1,15 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+  FaInstagram,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaClock,
+} from "react-icons/fa";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<{
@@ -36,26 +46,26 @@ const Contact: React.FC = () => {
   const contactInfo = [
     {
       title: "Email",
-      value: "hello@nexovora.com",
-      icon: "📧",
-      link: "mailto:hello@nexovora.com",
+      value: "contactnexovora@gmail.com",
+      icon: <FaEnvelope className="text-2xl" />,
+      link: "mailto:contactnexovora@gmail.com",
     },
     {
       title: "Phone",
       value: "+91 7510782581",
-      icon: "📞",
+      icon: <FaPhone className="text-2xl" />,
       link: "tel:+15551234567",
     },
     {
       title: "Location",
-      value: "Kottayam ,Kerala, India",
-      icon: "📍",
+      value: "Kottayam, Kerala, India",
+      icon: <FaMapMarkerAlt className="text-2xl" />,
       link: "#",
     },
     {
       title: "Business Hours",
       value: "Mon-Fri: 9:00 AM - 6:00 PM",
-      icon: "🕐",
+      icon: <FaClock className="text-2xl" />,
       link: "#",
     },
   ];
@@ -64,25 +74,25 @@ const Contact: React.FC = () => {
     {
       name: "LinkedIn",
       url: "https://linkedin.com/company/nexovora",
-      icon: "💼",
+      icon: <FaLinkedin className="text-xl" />,
       color: "hover:text-blue-600",
     },
     {
       name: "Twitter",
       url: "https://twitter.com/nexovora",
-      icon: "🐦",
+      icon: <FaTwitter className="text-xl" />,
       color: "hover:text-blue-400",
     },
     {
       name: "GitHub",
       url: "https://github.com/nexovora",
-      icon: "💻",
+      icon: <FaGithub className="text-xl" />,
       color: "hover:text-gray-800",
     },
     {
       name: "Instagram",
       url: "https://instagram.com/nexovora",
-      icon: "📷",
+      icon: <FaInstagram className="text-xl" />,
       color: "hover:text-pink-600",
     },
   ];
@@ -99,7 +109,7 @@ const Contact: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              Get In <span className="gradient-text text-glow">Touch</span>
+              Get In <span className="text-white">Touch</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Have questions about our products? Want to explore partnership
@@ -268,7 +278,7 @@ const Contact: React.FC = () => {
                       viewport={{ once: true }}
                       className="flex items-center p-4 bg-neutral-100 rounded-lg hover:shadow-lg transition-all duration-200"
                     >
-                      <div className="text-2xl mr-4">{info.icon}</div>
+                      <div className="text-neutral-900 mr-4">{info.icon}</div>
                       <div>
                         <h3 className="font-semibold text-neutral-900">
                           {info.title}
@@ -304,7 +314,7 @@ const Contact: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
-                      className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-xl text-neutral-900 hover:bg-gray-300 hover:text-black border-2 border-gray-300 transition-all duration-200"
+                      className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-neutral-900 hover:bg-gray-300 hover:text-black border-2 border-gray-300 transition-all duration-200"
                     >
                       {social.icon}
                     </motion.a>
@@ -343,8 +353,7 @@ const Contact: React.FC = () => {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Visit Our{" "}
-              <span className="gradient-text text-glow">Incubator</span>
+              Visit Our <span className="text-white">Incubator</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Located in the heart of innovation at our university's tech
@@ -447,7 +456,7 @@ const Contact: React.FC = () => {
               {
                 question: "Do you offer internship programs?",
                 answer:
-                  "Yes! We regularly offer internships across engineering, design, product management, and research roles. Check our Careers page for current openings.",
+                  "Yes! We regularly offer internships across engineering, design, product management, and research roles. Please contact us directly for current openings.",
               },
               {
                 question: "Can I visit your office?",
