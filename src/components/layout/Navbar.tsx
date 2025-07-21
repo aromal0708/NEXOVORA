@@ -33,13 +33,13 @@ const Navbar: React.FC = () => {
       className={`fixed w-full z-50 transition-all duration-300 bg-black backdrop-blur-md shadow-lg`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo on the left */}
           <Link to="/" className="flex items-center">
             <motion.img
               src="NEXOVORAwhitelogo.png"
               alt="Nexovora Logo"
-              className="h-20 w-auto"
+              className="h-16 sm:h-20 w-auto"
             />
           </Link>
 
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`nav-link font-semibold text-lg transition-colors duration-300 cursor-pointer px-3 py-2 focus:outline-none ${
+                className={`nav-link font-semibold text-base lg:text-lg transition-colors duration-300 cursor-pointer px-3 py-2 focus:outline-none ${
                   location.pathname === item.path
                     ? "text-white active"
                     : "text-white hover:text-gray-300"

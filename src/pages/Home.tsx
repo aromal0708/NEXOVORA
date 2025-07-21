@@ -44,7 +44,7 @@ const Home: React.FC = () => {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="mb-8"
           >
-            <h1 className="text-8xl md:text-8xl font-extrabold text-center text-white mb-4 tracking-widest">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-center text-white mb-4 tracking-widest">
               NEXOVORA
             </h1>
           </motion.div>
@@ -53,7 +53,7 @@ const Home: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           >
             <span className="text-white">Engineering Impact.</span>
             <br />
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto"
+            className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto"
           ></motion.p>
 
           <motion.div
@@ -115,10 +115,10 @@ const Home: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Who We Are
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
               Born from innovation and nurtured in academia, Nexovora represents
               the next generation of technology companies. We're not just
               building products—we're crafting solutions that matter.
@@ -175,10 +175,10 @@ const Home: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Our Innovation Portfolio
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
               Discover our cutting-edge products that are transforming
               industries and improving lives across education, mobility, and
               infrastructure.
@@ -237,10 +237,10 @@ const Home: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Build the Future?
             </h2>
-            <p className="text-xl text-gray-400 mb-8">
+            <p className="text-lg sm:text-xl text-gray-400 mb-8">
               Join us in our mission to create impactful digital solutions that
               matter.
             </p>

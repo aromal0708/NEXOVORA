@@ -85,10 +85,10 @@ const Products: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Our <span className="text-white">Products</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Innovative solutions designed to transform industries and improve
               lives. Each product represents our commitment to engineering
               impact.
@@ -134,30 +134,30 @@ const Products: React.FC = () => {
                     </span>
                   </div>
 
-                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                     {product.name}
                   </h2>
 
-                  <p className="text-xl text-gray-300 font-semibold mb-6">
+                  <p className="text-lg sm:text-xl text-gray-300 font-semibold mb-6">
                     {product.tagline}
                   </p>
 
-                  <p className="text-lg text-gray-400 mb-8">
+                  <p className="text-base sm:text-lg text-gray-400 mb-8">
                     {product.description}
                   </p>
 
                   <div className="mb-8">
-                    <h4 className="text-lg font-semibold text-white mb-4">
+                    <h4 className="text-base sm:text-lg font-semibold text-white mb-4">
                       Key Features:
                     </h4>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <ul className="grid grid-cols-1 gap-3 sm:gap-2 sm:grid-cols-2">
                       {product.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
-                          className="flex items-center text-gray-400"
+                          className="flex items-start text-gray-400"
                         >
                           <svg
-                            className="w-4 h-4 text-white mr-3 flex-shrink-0"
+                            className="w-4 h-4 text-white mr-3 flex-shrink-0 mt-0.5"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -167,17 +167,17 @@ const Products: React.FC = () => {
                               clipRule="evenodd"
                             />
                           </svg>
-                          {feature}
+                          <span className="text-sm sm:text-base">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 border-2 border-black hover:bg-gray-800 hover:border-gray-700">
+                    <button className="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-200 border-2 border-black hover:bg-gray-800 hover:border-gray-700 text-sm sm:text-base">
                       Learn More
                     </button>
-                    <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold transition-all duration-200 border-2 border-white hover:bg-gray-200 hover:text-black hover:border-gray-400">
+                    <button className="bg-white text-black px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-200 border-2 border-white hover:bg-gray-200 hover:text-black hover:border-gray-400 text-sm sm:text-base">
                       Request Demo
                     </button>
                   </div>
@@ -190,16 +190,16 @@ const Products: React.FC = () => {
                   }
                 >
                   <motion.div whileHover={{ scale: 1.05 }} className="relative">
-                    <div className="w-full h-80 rounded-2xl bg-black flex items-center justify-center shadow-lg text-white">
-                      <div className="text-8xl opacity-80">{product.icon}</div>
+                    <div className="w-full h-64 sm:h-80 rounded-2xl bg-black flex items-center justify-center shadow-lg text-white">
+                      <div className="text-6xl sm:text-8xl opacity-80">{product.icon}</div>
                     </div>
 
                     {/* Floating Elements */}
-                    <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/10 rounded-full flex items-center justify-center shadow-lg">
-                      <div className="text-2xl text-white">{product.icon}</div>
+                    <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-20 sm:h-20 bg-white/10 rounded-full flex items-center justify-center shadow-lg">
+                      <div className="text-xl sm:text-2xl text-white">{product.icon}</div>
                     </div>
 
-                    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/10 rounded-full animate-pulse"></div>
+                    <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-12 h-12 sm:w-16 sm:h-16 bg-white/10 rounded-full animate-pulse"></div>
                   </motion.div>
                 </div>
               </motion.div>
@@ -218,19 +218,19 @@ const Products: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               Built with{" "}
               <span className="text-white">
                 Cutting-Edge Technology
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
               Our products leverage the latest technologies to deliver
               exceptional performance, scalability, and user experience.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8">
             {[
               { name: "React", icon: "⚛️" },
               { name: "Node.js", icon: "🟢" },
@@ -246,10 +246,10 @@ const Products: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.1 }}
-                className="text-center p-6 bg-neutral-800 text-white rounded-lg shadow hover:bg-black hover:text-white transition-all duration-200"
+                className="text-center p-4 sm:p-6 bg-neutral-800 text-white rounded-lg shadow hover:bg-black hover:text-white transition-all duration-200"
               >
-                <div className="text-4xl mb-3">{tech.icon}</div>
-                <div className="text-sm font-medium">{tech.name}</div>
+                <div className="text-2xl sm:text-4xl mb-2 sm:mb-3">{tech.icon}</div>
+                <div className="text-xs sm:text-sm font-medium">{tech.name}</div>
               </motion.div>
             ))}
           </div>
@@ -265,18 +265,18 @@ const Products: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Interested in Our Solutions?
             </h2>
-            <p className="text-xl text-gray-400 mb-8">
+            <p className="text-lg sm:text-xl text-gray-400 mb-8">
               Get in touch to learn more about how our products can benefit your
               organization or to discuss potential collaborations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-black text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 border-2 border-black hover:bg-gray-800 hover:border-gray-700">
+              <button className="bg-black text-white px-6 sm:px-8 py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-200 border-2 border-black hover:bg-gray-800 hover:border-gray-700">
                 Schedule a Demo
               </button>
-              <button className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 border-2 border-white hover:bg-gray-200 hover:text-black hover:border-gray-400">
+              <button className="bg-white text-black px-6 sm:px-8 py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-200 border-2 border-white hover:bg-gray-200 hover:text-black hover:border-gray-400">
                 Contact Sales
               </button>
             </div>

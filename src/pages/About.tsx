@@ -34,10 +34,10 @@ const About: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Our <span className="text-white">Story</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               From college dormitories to cutting-edge solutions, discover the
               journey that's shaping the future of technology.
             </p>
@@ -55,7 +55,7 @@ const About: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
                 Our Mission
               </h2>
               <p className="text-lg text-gray-300 mb-6">
@@ -115,18 +115,18 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">
               Our Journey
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
               From incubation to innovation, here's how we've grown and what
               lies ahead.
             </p>
           </motion.div>
 
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-700"></div>
+            {/* Timeline line - hidden on mobile */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-700 hidden md:block"></div>
 
             {milestones.map((milestone, index) => (
               <motion.div
@@ -136,13 +136,13 @@ const About: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className={`relative flex items-center mb-12 ${
-                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                }`}
+                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                } flex-col md:flex-row`}
               >
                 <div
-                  className={`w-1/2 ${
-                    index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
-                  }`}
+                  className={`w-full md:w-1/2 ${
+                    index % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"
+                  } text-center md:text-left`}
                 >
                   <div className="bg-neutral-800 text-white p-6 rounded-lg shadow-lg border border-gray-700">
                     <div className="text-gray-400 font-bold text-xl mb-2">
@@ -155,8 +155,9 @@ const About: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gray-500 rounded-full border-4 border-black"></div>
+                {/* Timeline dot - centered on mobile, positioned for desktop */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gray-500 rounded-full border-4 border-black hidden md:block"></div>
+                <div className="w-4 h-4 bg-gray-500 rounded-full border-4 border-black md:hidden mb-4"></div>
               </motion.div>
             ))}
           </div>
@@ -173,18 +174,18 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">
               Incubated with{" "}
               <span className="text-white">Purpose</span>
             </h2>
             <div className="max-w-4xl mx-auto">
-              <p className="text-xl text-gray-300 mb-6">
+              <p className="text-lg sm:text-xl text-gray-300 mb-6">
                 Nexovora was born in the heart of academic excellence, where
                 innovation meets opportunity. Our college incubation program
                 provided not just resources, but a community of forward-thinking
                 mentors and peers who believed in our vision.
               </p>
-              <p className="text-xl text-gray-400 mb-8">
+              <p className="text-lg sm:text-xl text-gray-400 mb-8">
                 This unique environment allowed us to take calculated risks,
                 experiment with cutting-edge technologies, and most importantly,
                 focus on creating solutions that address real-world challenges
