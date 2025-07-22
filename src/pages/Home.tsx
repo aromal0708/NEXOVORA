@@ -44,7 +44,7 @@ const Home: React.FC = () => {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="mb-8"
           >
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-center text-white mb-4 tracking-widest">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-center text-white mb-4 tracking-widest">
               NEXOVORA
             </h1>
           </motion.div>
