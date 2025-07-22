@@ -13,7 +13,7 @@ const About: React.FC = () => {
       year: "2024",
       title: "First Products",
       description:
-        "Launched PrintSpark and began development on Mini ADAS and AI Traffic Controller.",
+        'Built multiple solutions like  Mini ADAS and AI based Traffic control system and started working on a real-world innovative product "Print Spark" ',
     },
     {
       year: "2025",
@@ -141,7 +141,9 @@ const About: React.FC = () => {
               >
                 <div
                   className={`w-full md:w-1/2 ${
-                    index % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"
+                    index % 2 === 0
+                      ? "md:pr-8 md:text-right"
+                      : "md:pl-8 md:text-left"
                   } text-center md:text-left`}
                 >
                   <div className="bg-neutral-800 text-white p-6 rounded-lg shadow-lg border border-gray-700">
@@ -175,8 +177,7 @@ const About: React.FC = () => {
             className="text-center"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">
-              Incubated with{" "}
-              <span className="text-white">Purpose</span>
+              Incubated with <span className="text-white">Purpose</span>
             </h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg sm:text-xl text-gray-300 mb-6">
@@ -191,7 +192,7 @@ const About: React.FC = () => {
                 focus on creating solutions that address real-world challenges
                 rather than just chasing market trends.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+              {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                 {[
                   { number: "8", label: "Team Members", icon: "👥" },
                   { number: "3", label: "Products Launched", icon: "🚀" },
@@ -212,7 +213,7 @@ const About: React.FC = () => {
                     <div className="text-gray-400">{stat.label}</div>
                   </motion.div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
