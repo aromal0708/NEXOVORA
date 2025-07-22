@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaLinkedin,
-  FaTwitter,
   FaGithub,
   FaInstagram,
   FaEnvelope,
@@ -10,6 +9,7 @@ import {
   FaMapMarkerAlt,
   FaClock,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<{
@@ -78,9 +78,9 @@ const Contact: React.FC = () => {
       color: "hover:text-blue-600",
     },
     {
-      name: "Twitter",
+      name: "X",
       url: "https://twitter.com/nexovora",
-      icon: <FaTwitter className="text-xl" />,
+      icon: <FaXTwitter className="text-xl" />,
       color: "hover:text-blue-400",
     },
     {
