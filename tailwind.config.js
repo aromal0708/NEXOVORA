@@ -18,7 +18,8 @@ export default {
         "glass-black": "rgba(15, 4, 76, 0.8)",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        primary: ['Inter', 'sans-serif'],
+        secondary: ['Roboto Mono', 'monospace'],
       },
       backgroundImage: {
         "premium-gradient":

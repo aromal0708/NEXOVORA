@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="mb-8"
         >
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-center text-white mb-4 tracking-widest">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-bold text-center text-white mb-4 tracking-widest">
             NEXOVORA
           </h1>
         </motion.div>
@@ -24,11 +24,17 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+          className="gap-6"
         >
-          <span className="text-white">Engineering Impact.</span>
-          <br />
-          <span className="text-gray-400">Building the Future.</span>
+          <div className="flex flex-col gap-6">
+            <span className="font-semibold text-3xl sm:text-xl md:text-2xl lg:text-4xl text-white">
+              Intellegent Systems & Digital Solutions
+            </span>
+            <span className="font-normal text-xl sm:text-base md:text-lg lg:text-xl text-gray-400">
+              We design and deploy robust full-stack applications and AI-driven
+              products that solve your most complex challenges.
+            </span>
+          </div>
         </motion.h2>
 
         <motion.p
@@ -46,15 +52,9 @@ const Hero: React.FC = () => {
         >
           <Link
             to="/products"
-            className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:bg-gray-200"
+            className="bg-white text-black px-8 py-4 rounded-full font-semibold text-xl transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:bg-gray-200"
           >
-            Explore Our Products
-          </Link>
-          <Link
-            to="/about"
-            className="bg-gray-800 text-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:bg-gray-200"
-          >
-            Our Story
+            What We Build
           </Link>
         </motion.div>
       </div>

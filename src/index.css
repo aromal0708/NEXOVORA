@@ -36,6 +36,7 @@ html {
 body {
   background: #eeeeee;
   color: #0f044c;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Navbar underline animations */
