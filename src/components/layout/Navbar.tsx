@@ -34,16 +34,17 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
-          {/* Logo on the left */}
           <Link to="/" className="flex items-center">
             <motion.img
               src="NEXOVORAwhitelogo.png"
               alt="Nexovora Logo"
               className="h-16 sm:h-20 w-auto"
             />
+            <motion.span className="ml-2 text-white font-bold text-xl sm:text-2xl">
+              NEXOVORA
+            </motion.span>
           </Link>
 
-          {/* Navigation Links */}
           <div className="hidden md:flex flex-1 justify-end items-center space-x-8">
             {navItems.map((item) => (
               <Link
@@ -62,7 +63,6 @@ const Navbar: React.FC = () => {
               </Link>
             ))}
           </div>
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -94,7 +94,6 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}

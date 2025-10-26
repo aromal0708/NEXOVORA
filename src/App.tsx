@@ -11,7 +11,9 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen">
-        <Navbar />
+        <header>
+          <Navbar />
+        </header>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -21,7 +23,9 @@ function App() {
             <Route path="/team" element={<Team />} />
           </Routes>
         </main>
-        <Footer />
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </Router>
   );
