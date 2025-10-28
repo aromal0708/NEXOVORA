@@ -57,10 +57,8 @@ const Hero: React.FC = () => {
             to="/products"
             className="group relative inline-flex items-center justify-center px-8 py-4 font-semibold text-xl tracking-tight overflow-hidden rounded-full bg-white transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] hover:bg-gray-50"
           >
-            {/* Subtle shadow effect */}
             <span className="absolute inset-0 rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)] group-hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-shadow duration-300"></span>
             
-            {/* Shimmer effect */}
             <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                   style={{
                     background: 'linear-gradient(110deg, transparent, rgba(255,255,255,0.8), transparent)',
@@ -69,7 +67,7 @@ const Hero: React.FC = () => {
                   }}>
             </span>
             
-            {/* Button content */}
+
             <span className="relative flex items-center gap-2 text-black font-bold">
               <span className="tracking-wider">What We Build</span>
               <svg 
@@ -87,7 +85,6 @@ const Hero: React.FC = () => {
               </svg>
             </span>
             
-            {/* Focus ring for accessibility */}
             <span className="absolute inset-[-3px] rounded-full opacity-0 focus-within:opacity-100 transition-opacity duration-300 border-2 border-white"></span>
           </Link>
         </motion.div>

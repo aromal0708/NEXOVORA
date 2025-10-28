@@ -48,20 +48,20 @@ body {
 .nav-link::before {
   content: "";
   position: absolute;
-  bottom: -4px;
-  left: 12px;
+  bottom: -2px;
+  left: 6px;
   width: 0;
-  height: 2px;
+  height: 1.5px;
   background: linear-gradient(90deg, #ffffff, #e5e7eb);
   transition: width 0.3s ease;
 }
 
 .nav-link:hover::before {
-  width: calc(100% - 24px);
+  width: calc(100% - 12px);
 }
 
 .nav-link.active::before {
-  width: calc(100% - 24px);
+  width: calc(100% - 12px);
   background: linear-gradient(90deg, #ffffff, #e5e7eb);
 }
 

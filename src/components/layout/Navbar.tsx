@@ -30,9 +30,10 @@ const Navbar: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full z-50 transition-all duration-300 bg-black backdrop-blur-md shadow-lg`}
+      className="fixed w-full z-50 transition-all duration-300"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-md"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           <Link to="/" className="flex items-center">
             <motion.img
