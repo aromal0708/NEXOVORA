@@ -5,10 +5,13 @@ import ScrollIndicator from "./ScrollIndicator.tsx";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center bg-black overflow-hidden">
-      <div className="absolute inset-0"></div>
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0F044C]/40 to-black">
+        <div className="space-bg opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-80"></div>
+      </div>
 
-      <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, scale: 0.5, rotateY: 180 }}
           animate={{ opacity: 1, scale: 1, rotateY: 0 }}
@@ -52,9 +55,40 @@ const Hero: React.FC = () => {
         >
           <Link
             to="/products"
-            className="bg-white text-black px-8 py-4 rounded-full font-semibold text-xl transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:bg-gray-200"
+            className="group relative inline-flex items-center justify-center px-8 py-4 font-semibold text-xl tracking-tight overflow-hidden rounded-full bg-white transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] hover:bg-gray-50"
           >
-            What We Build
+            {/* Subtle shadow effect */}
+            <span className="absolute inset-0 rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)] group-hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-shadow duration-300"></span>
+            
+            {/* Shimmer effect */}
+            <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                  style={{
+                    background: 'linear-gradient(110deg, transparent, rgba(255,255,255,0.8), transparent)',
+                    backgroundSize: '200% 100%',
+                    animation: 'shimmer 1.5s infinite'
+                  }}>
+            </span>
+            
+            {/* Button content */}
+            <span className="relative flex items-center gap-2 text-black font-bold">
+              <span className="tracking-wider">What We Build</span>
+              <svg 
+                className="w-5 h-5 transform transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                />
+              </svg>
+            </span>
+            
+            {/* Focus ring for accessibility */}
+            <span className="absolute inset-[-3px] rounded-full opacity-0 focus-within:opacity-100 transition-opacity duration-300 border-2 border-white"></span>
           </Link>
         </motion.div>
       </div>
